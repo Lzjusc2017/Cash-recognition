@@ -33,10 +33,11 @@ def get_avg(mavg1,mavg2,iris,class_kind):
         avg2 = 0
         for j in range(class_kind[0]*50,class_kind[0]*50+40):
             avg1 = avg1 + iris.data[j][i]
+            #avg1 = avg1 + iris.data[i][j]
         for j in range(class_kind[1]*50,class_kind[1]*50+40):
             avg2 = avg2 + iris.data[j][i]
-        mavg1.append(avg1/40)
-        mavg2.append(avg2/40)
+        mavg1.append(avg1/20)
+        mavg2.append(avg2/20)
     print("avg1 is " + str(mavg1))
     print("avg2 is " + str(mavg2))
 
@@ -63,8 +64,8 @@ def get_sw(avg1,avg2,iris,class_kind):
             else:
                 feature2 = feature2 + nd.dot(temp, temp.T)
 
-    feature1 = feature1/39          # 除以总数-1
-    feature2 = feature2 /39
+    feature1 = feature1/18         # 除以总数-1
+    feature2 = feature2 /18
     feature = feature1 + feature2   # 总特征sw
     return feature,feature2,feature
 
