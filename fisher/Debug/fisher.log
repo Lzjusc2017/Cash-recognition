@@ -1,0 +1,3 @@
+﻿  fisher.cpp
+C:\Users\Lin\source\repos\fisher\fisher\fisher.cpp(272,30): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+  fisher.vcxproj -> C:\Users\Lin\source\repos\fisher\Debug\fisher.exe
